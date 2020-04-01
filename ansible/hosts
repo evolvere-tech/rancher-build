@@ -1,0 +1,6 @@
+[rancher_servers]
+test-rancher ansible_host=52.151.94.172
+
+[rancher_servers:vars]
+ansible_ssh_user=evouser
+ansible_ssh_private_key_file=/Users/scorpio/keys/aao_rancher_rsa

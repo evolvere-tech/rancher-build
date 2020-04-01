@@ -1,0 +1,10 @@
+- hosts: all
+
+  vars:
+    docker_users:
+      - evouser
+
+  roles:
+    - docker
+
+  become: yes
