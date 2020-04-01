@@ -2,13 +2,13 @@
 
 Management machine running these scripts needs terraform, ansible, rke, kubectl and helm installed.
 
-###Create ssh keys
+### Create ssh keys
 
 ```bash
 ssh-keygen
 ```
 
-###Build VM(s) with terraform
+### Build VM(s) with terraform
 
 ```
 cd terraform
@@ -21,7 +21,7 @@ terraform plan --out rancher-plan
 terraform apply "rancher-plan"
 ```
 
-###Run Ansible playbook to install docker on VM(s)
+### Run Ansible playbook to install docker on VM(s)
 
 ```bash
 cd ansible
@@ -32,7 +32,7 @@ Edit ```hosts``` file and update hostnames and IP addresses.
 ansible-playbook -i hosts docker_play.yml -vvv
 ```
 
-###Build RKE cluster
+### Build RKE cluster
 
 ```bash
 cd rke
@@ -46,7 +46,7 @@ kubectl get nodes
 kubectl get pods —all-namespaces
 ```
 
-###Install Rancher
+### Install Rancher
 ```bash
 helm repo add rancher-latest https://releases.rancher.com/server-charts/latest
 kubectl create namespace cattle-system
