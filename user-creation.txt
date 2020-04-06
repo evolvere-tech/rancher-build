@@ -1,6 +1,6 @@
 ## create users
 sudo useradd svc_rancher
-sudo mkdir -p /home/svc_rancher && chown svc_rancher:svc_rancher /home/svc_rancher -R
+sudo mkdir -p /home/svc_rancher && sudo chown svc_rancher:svc_rancher /home/svc_rancher -R
 sudo su - svc_rancher
 
 ## run on mgmt server
