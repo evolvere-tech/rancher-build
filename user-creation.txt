@@ -8,4 +8,4 @@ ssh-keygen -t rsa
 
 ## copy public into authorized keys file
 mkdir .ssh && chmod 755 .ssh
-touch .ssh/authorized_keys && chmod 0600
+touch .ssh/authorized_keys && chmod 0600 .ssh/authorized_keys
