@@ -1,0 +1,25 @@
+nodes:
+    - address: host1
+      user: svc_rancher
+      role:
+        - controlplane
+        - etcd
+        - worker
+    - address: host2
+      user: svc_rancher
+      role:
+        - controlplane
+        - etcd
+        - worker
+    - address: host3
+      user: svc_rancher
+      role:
+        - controlplane
+        - etcd
+        - worker
+private_registries:
+     - url: registry.com
+       user: Username
+       password: password
+       is_default: true
+cluster_name: rancher-dev
