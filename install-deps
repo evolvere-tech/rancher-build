@@ -20,7 +20,7 @@ wget https://github.com/rancher/rancher/releases/download/v2.4.2/rancher-save-im
 chmod +x ./*.sh
 
 ./rancher-save-images.sh --image-list ./rancher-images.txt
-./rancher-load-images.sh --image-list --registry [insert_registry_name_afterlogin]
+./rancher-load-images.sh --image-list ./rancher-images.txt --registry [insert_registry_name_afterlogin]
 
 cd ../2.3.6/
 wget https://github.com/rancher/rancher/releases/download/v2.3.6/rancher-images.txt
@@ -30,4 +30,4 @@ wget https://github.com/rancher/rancher/releases/download/v2.3.6/rancher-save-im
 chmod +x ./*.sh
 
 ./rancher-save-images.sh --image-list ./rancher-images.txt
-./rancher-load-images.sh --image-list --registry [insert_registry_name_afterlogin]
+./rancher-load-images.sh --image-list ./rancher-images.txt --registry [insert_registry_name_afterlogin]
