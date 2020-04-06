@@ -1,8 +1,11 @@
-## get dependencies - rke
+## get dependencies - docker & rke
+
+sudo apt-get install docker-ce docker-ce-cli containerd.io
 
 wget https://github.com/rancher/rke/releases/download/v1.0.6/rke_linux-amd64
 chmod +x ./rke_linux-amd64
 sudo cp ./rke_linux-amd64 /usr/bin/rke
+
 
 ## install packages - apt
 sudo apt-get install ansible
