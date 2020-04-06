@@ -1,0 +1,4 @@
+## test kubectl
+
+export KUBECONFIG=~/rancher-dev/kube_config_cluster.yml
+kubectl get nodes
