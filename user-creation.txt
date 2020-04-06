@@ -1,0 +1,10 @@
+## create users
+useradd svc_rancher
+su - svc_rancher
+
+## run on mgmt server
+ssh-keygen -t rsa
+
+## copy public into authorized keys file
+mkdir .ssh && chmod 755 .ssh
+touch .ssh/authorized_keys && chmod 0600
