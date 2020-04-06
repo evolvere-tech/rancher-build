@@ -7,7 +7,27 @@ wget https://github.com/rancher/rke/releases/download/v1.0.6/rke_linux-amd64
 chmod +x ./rke_linux-amd64
 sudo cp ./rke_linux-amd64 /usr/bin/rke
 
+## mirror rancher images
+mkdir 2.3.6
+mkdir 2.4.2
 
-## install packages - apt
-sudo apt-get install ansible
+cd ./2.4.2/
+wget https://github.com/rancher/rancher/releases/download/v2.4.2/rancher-images.txt
+wget https://github.com/rancher/rancher/releases/download/v2.4.2/rancher-load-images.sh
+wget https://github.com/rancher/rancher/releases/download/v2.4.2/rancher-save-images.sh
 
+
+chmod +x ./*.sh
+
+./rancher-save-images.sh --image-list ./rancher-images.txt
+./rancher-load-images.sh --image-list --registry [insert_registry_name_afterlogin]
+
+cd ../2.3.6/
+wget https://github.com/rancher/rancher/releases/download/v2.3.6/rancher-images.txt
+wget https://github.com/rancher/rancher/releases/download/v2.3.6/rancher-load-images.sh
+wget https://github.com/rancher/rancher/releases/download/v2.3.6/rancher-save-images.sh
+
+chmod +x ./*.sh
+
+./rancher-save-images.sh --image-list ./rancher-images.txt
+./rancher-load-images.sh --image-list --registry [insert_registry_name_afterlogin]
