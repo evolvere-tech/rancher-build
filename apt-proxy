@@ -1,0 +1,3 @@
+sudo touch /etc/apt/apt.conf.d/proxy.conf
+sudo echo -e 'Acquire::http::Proxy "http://user:password@proxy.server:port/";' > /etc/apt/apt.conf.d/proxy.conf
+sudo echo -e 'Acquire::https::Proxy "http://user:password@proxy.server:port/";' >> /etc/apt/apt.conf.d/proxy.conf
