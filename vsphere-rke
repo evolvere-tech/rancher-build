@@ -1,0 +1,26 @@
+rancher_kubernetes_engine_config:
+  cloud_provider:
+    name: vsphere
+    vsphereCloudProvider:
+      global:
+        insecure-flag: true
+        virtual_center:
+          1.1.1.1:
+            datacenters: 
+            user:
+            password:
+        workspace:
+          datacenter:
+          default-datastore: 
+          folder: vm/
+          server: 1.1.1.1
+          
+          
+  services:
+    kube-api:
+      service_cluster_ip_range: x.x.x.x/20
+    kube-controller:
+      cluster_cidr: y.y.y.y/20
+      service_cluster_ip_range: x.x.x.x/20
+    kubelet:
+      cluster_dns_server: x.x.x.10
