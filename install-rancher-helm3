@@ -36,3 +36,11 @@ helm install rancher rancher-stable/rancher --namespace cattle-system --set host
   
 ## wait for deployment to finish
 kubectl -n cattle-system rollout status deploy/rancher
+
+
+imagePullSecrets:
+  - name: azurecr
+hostname: rancher.domain.com
+ingress.tls.source: secret 
+privateCA: true
+rancherImage: fullimagename/rancher/rancher
