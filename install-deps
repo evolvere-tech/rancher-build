@@ -6,7 +6,8 @@ usermod -aG docker username
 
 ## internet only -> curl https://releases.rancher.com/install-docker/18.09.sh | sh
 
-systemctl start docker
+sudo systemctl start docker
+sudo systemctl enable docker
 docker ps
 
 wget https://github.com/rancher/rke/releases/download/v1.1.3/rke_linux-amd64
