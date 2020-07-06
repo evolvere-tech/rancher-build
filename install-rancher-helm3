@@ -30,7 +30,9 @@ kubectl get pods --namespace cert-manager
 helm install rancher rancher-latest/rancher \
   --namespace cattle-system \
   --set hostname=rancher.domain.com
-  
+## helm airgap own CA
+helm install rancher rancher-stable/rancher --namespace cattle-system --set hostname=rancher.my.org --set ingress.tls.source=secret --set privateCA=true --set rancherImage=fullimagename/rancher/rancher --set imagePullSecrets=['azurecr']
+
   
 ## wait for deployment to finish
 kubectl -n cattle-system rollout status deploy/rancher
