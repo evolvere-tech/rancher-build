@@ -43,6 +43,13 @@ then
   exit
 fi
 
+echo -e "removing node $n"
+/usr/bin/rancher node rm $n
+if [ $? -gt 0 ];
+then
+  echo "delete command failed! Check Rancher"
+  exit
+fi
 
 
 
